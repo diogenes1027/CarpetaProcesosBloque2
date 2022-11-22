@@ -47,15 +47,15 @@ public class EjercicioRubik : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(rotZ < 360.0f *2f){
-            rotZ += 0.1f;
+        if(rotZ < 360.0f){
+            rotZ += 0.5f;
             for(int i = 4; i < 8; i++){
                 matrices[i] = Transformations.RotateZ(rotZ)* mOriginales[i];
             }
         }
         else if(rotY < 360.0f)
         {
-            rotY += 0.1f;
+            rotY += 0.5f;
             matrices[2] = Transformations.RotateY(rotY) * mOriginales[2];
             matrices[3] = Transformations.RotateY(rotY) * mOriginales[3];
             matrices[6] = Transformations.RotateY(rotY) * mOriginales[6];
